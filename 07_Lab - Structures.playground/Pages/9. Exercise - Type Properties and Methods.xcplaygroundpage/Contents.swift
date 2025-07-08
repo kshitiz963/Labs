@@ -11,7 +11,7 @@ struct User {
     
     static var currentUser: User?
         
-    // A method to set the current logged-in user
+ 
     static func setCurrentUser(user: User) {
         currentUser = user
     }
@@ -24,7 +24,6 @@ struct User {
 
 let myUser = User(userName: "Kshitiz", email: "kshitiz@gmail.com", age: 20)
 
-// Setting this user as the current logged-in user
 User.setCurrentUser(user: myUser)
 
 if let loggedInUser = User.currentUser {
@@ -42,13 +41,10 @@ if let loggedInUser = User.currentUser {
 
 let anotherUser = User(userName: "Levy", email: "levy@gmail.com", age: 22)
 
-// Logging in with myUser first
 User.logIn(user: myUser)
 
-// Then logging in with anotherUser
 User.logIn(user: anotherUser)
 
-// Checking the currentUser after logging in with anotherUser
 if let loggedInUser = User.currentUser {
     print("Current logged in user: \(loggedInUser.userName)")
 } else {
