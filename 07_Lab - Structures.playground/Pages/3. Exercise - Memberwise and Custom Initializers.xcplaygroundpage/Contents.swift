@@ -9,7 +9,7 @@ struct GPS {
 
 }
 //:  Now create a constant instance of `GPS` called `somePlace`, and use the memberwise initializer to set `latitude` to 51.514004, and `longitude` to 0.125226. Print the values of `somePlace`'s properties.
-var somePlace = GPS(longitutde: 51.514004, latitude: 0.125226)
+let somePlace = GPS(longitutde: 51.514004, latitude: 0.125226)
 print(somePlace)
 
 //:  In Structs, Instance, and Default Values, you also created a `Book` struct with properties `title`, `author`, `pages`, and `price`. Create this struct again without default values. Give each property the appropriate type. Declare your `favoriteBook` instance and pass in the values of your favorite book using the memberwise initializer. Print a statement about your favorite book using `favoriteBook`'s properties.
@@ -19,28 +19,28 @@ struct Book {
     var pages: Int
     var price: Double
     }
-var foavouriteBook = Book(title: "harrypottr" , author:" JK rowling" , pages: 1000 , price: 100.00)
-print(foavouriteBook)
+var favouriteBook = Book(title: "End is the Beginning" , author:" JK rowling" , pages: 1000 , price: 100.00)
+print(favouriteBook)
 
 /*:
  Make a `Laptop` struct with three variable properties, `screenSize` of type `Int`, `repairCount` of type `Int`, and `yearPurchased` of type `Int`. Give `screenSize` a default value of `13` and `repairCount` a default value of `0`, and leave `yearPurchased` without a default value. Declare two instances of `Laptop`, using the two provided memberwise initializers.
  */
 struct Laptop {
-    var screenSzie: Int = 13
+    var screenSize: Int = 13
     var repairCount: Int = 0
     var yearPurchased: Int
 
-    init(screenSzie: Int, repairCount: Int, yearPurchased: Int) {
-        self.screenSzie = screenSzie
+    init(screenSize: Int, repairCount: Int, yearPurchased: Int) {
+        self.screenSize = screenSize
         self.repairCount = repairCount
         self.yearPurchased = yearPurchased
     }
     init(screenSize: Int , yearPurchased: Int) {
-        self.screenSzie = screenSize
+        self.screenSize = screenSize
         self.yearPurchased = yearPurchased
     }
 }
-let laptop1 = Laptop(screenSzie: 150 , repairCount: 12 , yearPurchased: 2025)
+let laptop1 = Laptop(screenSize: 150 , repairCount: 12 , yearPurchased: 2025)
 let laptop2 = Laptop(screenSize: 14 , yearPurchased: 2020)
 
 
@@ -68,11 +68,13 @@ struct Height {
 }
 
 //:  Now create a variable instance of `Height` called `someonesHeight`. Use the initializer for inches to set the height to 65. Print out the property for height in centimeters and verify that it is equal to 165.1.
-var someonesHeight = Height(heightInCentimeters: 65)
+var someonesHeight = Height(Inches: 65)
+print(someonesHeight.heightInCentimeters)
 
 //:  Now create a variable instance of `Height` called `myHeight` and initialize it with your own height. Verify that both `heightInInches` and `heightInCentimeters` are accurate.
-
-
+var myHeight = Height(Centimeters: 170)
+print(myHeight.heightInInches)
+print(myHeight.heightInCentimeters)
 /*:
 [Previous](@previous)  |  page 3 of 10  |  [Next: App Exercise - Users and Distance](@next)
  */

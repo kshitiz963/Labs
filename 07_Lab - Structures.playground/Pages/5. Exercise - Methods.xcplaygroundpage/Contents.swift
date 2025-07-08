@@ -10,10 +10,10 @@ struct Book {
     var price: Double
     
     func description() -> String {
-        title + " by " + author + " has " + String(pages) + " pages and costs $" + String(price)
+        return title + " by " + author + " has " + String(pages) + " pages and costs $" + String(price)
     }
 }
-let book1 = Book(title: "harrypotter", author: "j.k.rowling", pages: 1000, price: 4000.9)
+let book1 = Book(title: "End is the beginning", author: "j.k.rowling", pages: 1000, price: 4000.9)
 let bookDescription = book1.description()
 print(bookDescription)
 
@@ -24,13 +24,15 @@ struct Post {
     var message: String
     var likes: Int
     var numberOfComments: Int
+    
     mutating func like() {
         likes += 1
     }
 }
-    var myPost = Post(message: "hello", likes: 20, numberOfComments: 30)
+    
+var myPost = Post(message: "hello", likes: 20, numberOfComments: 30)
 print("likes before: \(myPost.likes)")
-    myPost.like()
+myPost.like()
 print("likes after: \(myPost.likes)")
 
 
